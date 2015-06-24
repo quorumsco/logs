@@ -1,3 +1,4 @@
+// Package logs provide basic and unified logging functions.
 package logs
 
 import (
@@ -21,20 +22,20 @@ func logger(level string, c color.Attribute) func(format interface{}, v ...inter
 	}
 }
 
-// Debug logger
+// Debug logger.
 var Debug = logger("DEBU", color.FgCyan)
 
-// Info logger
+// Info logger.
 var Info = logger("INFO", color.Reset)
 
-// Notice logger
+// Notice logger.
 var Notice = logger("NOTI", color.FgGreen)
 
-// Warning logger
+// Warning logger.
 var Warning = logger("WARN", color.FgYellow)
 
-// Error logger
+// Error logger.
 var Error = logger("ERRO", color.FgRed)
 
-// Critical logger
+// Critical logger.
 var Critical = logger("CRIT", color.FgMagenta)
