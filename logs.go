@@ -10,7 +10,7 @@ import (
 
 // DefaultLogger provide a simple interface et sane defaults.
 // By default, it will not log debug infos.
-var DefaultLogger = &Logger{Level: 4}
+var DefaultLogger = &Logger{Level: InfoLevel}
 
 const (
 	CriticalLevel = iota
