@@ -86,19 +86,19 @@ func Level(level int) {
 }
 
 // Debug logger.
-var Debug = DefaultLogger.Debug
+var Debug = func(format interface{}, v ...interface{}) { DefaultLogger.Debug(format, v...) }
 
 // Info logger.
-var Info = DefaultLogger.Info
+var Info = func(format interface{}, v ...interface{}) { DefaultLogger.Info(format, v...) }
 
 // Notice logger.
-var Notice = DefaultLogger.Notice
+var Notice = func(format interface{}, v ...interface{}) { DefaultLogger.Notice(format, v...) }
 
 // Warning logger.
-var Warning = DefaultLogger.Warning
+var Warning = func(format interface{}, v ...interface{}) { DefaultLogger.Warning(format, v...) }
 
 // Error logger.
-var Error = DefaultLogger.Error
+var Error = func(format interface{}, v ...interface{}) { DefaultLogger.Error(format, v...) }
 
 // Critical logger.
-var Critical = DefaultLogger.Critical
+var Critical = func(format interface{}, v ...interface{}) { DefaultLogger.Critical(format, v...) }
